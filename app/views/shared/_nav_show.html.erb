@@ -1,0 +1,7 @@
+<ul class="nav_links_list">
+  <li class="nav_link_item"><%= link_to "Edit", edit_article_path(@article) %></li>
+  <li class="nav_link_item"><%= link_to "Delete", article_path(@article), data: {
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"
+  } %></li>
+</ul>

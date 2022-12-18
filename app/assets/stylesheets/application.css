@@ -1,0 +1,91 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Kanit";
+	background: #FAFEF4;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+.main_container {
+	width: 50em;
+	max-width: 90vw;
+	margin: 0 auto;
+}
+
+.nav_container {
+	width: 80em;
+	max-width: 90vw;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav_logo {
+	font-weight: 200;
+	padding: 0.5em 0;
+}
+
+.nav_links_list {
+	list-style: none;
+	display: flex;
+	gap: 1em;
+}
+
+.nav_link_submit {
+	outline: none;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+.article_result_info {
+	color: #0009;
+}
+
+.article_item {
+	padding: 0.5em 0;
+	list-style: none;
+}
+
+.input_container {
+	position: relative;
+}
+
+.input_blog_title input,
+.input_blog_body textarea{
+	width: 100%;
+	outline: none;
+	border: none;
+	font-family: inherit;
+}
+
+.input_blog_error {
+	color: red;
+	position: absolute;
+	right: 0;
+	top: 0;
+}

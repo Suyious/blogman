@@ -1,0 +1,19 @@
+<%= form_with id: form_id , model: @article do |form| %>
+  <div class="input_container input_blog_title">
+    <%= form.label :title %><br>
+    <%= form.text_field :title, placeholder: "Enter Title here" %>
+    <div class="input_blog_error"><%= @article.errors.full_messages_for(:title)[0] %></div>
+  </div>
+  <div class="input_container input_blog_body">
+    <%= form.label :body %>
+    <%= form.text_area :body, placeholder: "Start Writing Blog here" %>
+    <div class="input_blog_error"><%= @article.errors.full_messages_for(:body)[0] %></div>
+  </div>
+  <div class="input_blog_status">
+    <%= form.label :status %><br>
+    <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end%>

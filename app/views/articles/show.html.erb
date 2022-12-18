@@ -1,0 +1,13 @@
+<% content_for :nav do %>
+  <%= render partial: "shared/nav_show", layout: "shared/nav" %>
+<% end %>
+
+<h1><%= @article.title %></h1>
+<%= time_ago_in_words( @article.created_at ) %> ago
+<p><%= @article.body %></p>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<h2>Comments:</h2>
+<%= render @article.comments  %>

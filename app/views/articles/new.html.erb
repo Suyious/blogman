@@ -1,0 +1,5 @@
+<% content_for :nav do %>
+  <%= render partial: "shared/nav_new", layout: "shared/nav" %>
+<% end %>
+
+<%= render "form", article: @article, form_id: "form-new" %>
